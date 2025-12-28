@@ -10,11 +10,19 @@
     "extra": {
         "map": [
             [
+                "dist/bin/mage-clean",
+                "bin/mage-clean"
+            ],
+            [
                 "dist/bin/mage-init",
                 "bin/mage-init"
             ]
         ],
         "chmod": [
+            {
+                "mask": "0755",
+                "path": "bin/mage-clean"
+            },
             {
                 "mask": "0755",
                 "path": "bin/mage-init"
