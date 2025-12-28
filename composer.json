@@ -1,8 +1,7 @@
 {
     "name": "esplin/magento2-scripts",
     "description": "Helpful Magento2 scripts",
-    "require": {},
-    "type": "library",
+    "type": "magento2-component",
     "version": "1.0.0",
     "license": [
         "OSL-3.0",
