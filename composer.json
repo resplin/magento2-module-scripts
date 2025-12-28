@@ -1,12 +1,17 @@
 {
-	"name": "esplin/magento2-scripts",
-	"description": "Helpful Magento2 scripts",
+    "name": "esplin/magento2-scripts",
+    "description": "Helpful Magento2 scripts",
     "require": {},
     "type": "library",
-	"version": "1.0.0",
-	"license": [
-		"OSL-3.0",
-		"AFL-3.0"
-	],
-	"bin": ["bin/mage-init"]
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "extra": {
+        "map": [
+            [
+                "dist/bin/mage-init",
+                "bin/mage-init"
+    }
 }
