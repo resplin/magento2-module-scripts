@@ -8,5 +8,5 @@
 		"OSL-3.0",
 		"AFL-3.0"
 	],
-	"bin": ["bin/init"]
+	"bin": ["bin/mage-init"]
 }
