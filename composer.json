@@ -16,6 +16,10 @@
             [
                 "dist/bin/mage-init",
                 "bin/mage-init"
+            ],
+            [
+                "dist/bin/mage-refresh-composer",
+                "bin/mage-refresh-composer"
             ]
         ],
         "chmod": [
@@ -26,6 +30,10 @@
             {
                 "mask": "0755",
                 "path": "bin/mage-init"
+            },
+            {
+                "mask": "0755",
+                "path": "bin/mage-refresh-composer"
             }
         ]
     }

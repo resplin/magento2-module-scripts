@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo "Refreshing vendor via composer..."
+
+rm -rf vendor
+composer update
+
+./mage-clean
+
+echo "Replacing '+FollowSymLinks' with '+SymLinksIfOwnerMatch' in all .htaccess files..."
+find . -type f -name '.htaccess' -exec sed -i 's/\+FollowSymLinks/\+SymLinksIfOwnerMatch/g' {} +
+echo "  DONE\n"
