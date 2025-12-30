@@ -5,7 +5,7 @@ set -euo pipefail
 echo "Refreshing vendor via composer..."
 
 rm -rf vendor
-composer update
+composer install
 
 bin/mage-clean
 
