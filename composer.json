@@ -41,6 +41,10 @@
             },
             {
                 "mask": "0755",
+                "path": "bin/mage-export-db"
+            },
+            {
+                "mask": "0755",
                 "path": "bin/mage-init"
             },
             {
