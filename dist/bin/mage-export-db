@@ -2,17 +2,22 @@
 
 set -euo pipefail
 
-php bin/magento maintenance:enable
+echo "Exporting Magento2 DB..."
 
-rm -rf var/generation/* var/cache/* var/view_preprocessed/* pub/static/deployed_versions.txt pub/static/frontend/* pub/static/adminhtml/* var/page_cache/* var/di/* var/di generated/code/* generated/metadata/*
+echo "Searching for magerun2..."
+if [[ ! -e ./vendor/bin/n98-magerun2 ]]; then
+  echo "Did not find it magerun2, installing via composer..."
+  composer require n98/magerun2-dist --no-update
+  composer update n98/magerun2-dist --no-interaction --prefer-dist
+fi
 
-php bin/magento cache:flush
-php bin/magento setup:upgrade
-php bin/magento setup:di:compile
-php bin/magento setup:static-content:deploy -f en_US --jobs=$(nproc) --content-version="$(date +%s)"
+if [[ ! -e ./vendor/bin/n98-magerun2 ]]; then
+  echo "Unable to execute magerun2"
+  exit 1
+fi
 
-php bin/magento maintenance:disable
+./vendor/bin/n98-magerun2 db:dump test.sql
 
-echo "CLEAN COMPLETE"
+echo "EXPORT TEST complete"
 
 exit 0
