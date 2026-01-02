@@ -11,4 +11,7 @@ bin/mage-clean
 
 echo "Replacing '+FollowSymLinks' with '+SymLinksIfOwnerMatch' in all .htaccess files..."
 find . -type f -name '.htaccess' -exec sed -i 's/\+FollowSymLinks/\+SymLinksIfOwnerMatch/g' {} +
-echo "  DONE\n"
+
+echo "REFRESH COMPLETE"
+
+exit 0

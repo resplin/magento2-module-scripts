@@ -12,3 +12,7 @@ php bin/magento setup:di:compile
 php bin/magento setup:static-content:deploy -f en_US --jobs=$(nproc) --content-version="$(date +%s)"
 
 php bin/magento maintenance:disable
+
+echo "CLEAN COMPLETE"
+
+exit 0
