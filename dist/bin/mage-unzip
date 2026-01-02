@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo "Extracting Magento2 directories app, dev, generated, lib, and vendor..."
+
+for file in app dev generated lib vendor; do rm -rf $file; tar -zxf $file.tar.gz $file; rm $file.tar.gz; echo "$file unzipped"; done
+
+echo "EXTRACTION COMPLETE!"
+
+exit 0

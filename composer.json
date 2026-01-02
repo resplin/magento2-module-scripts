@@ -20,6 +20,14 @@
             [
                 "dist/bin/mage-refresh-composer",
                 "bin/mage-refresh-composer"
+            ],
+            [
+                "dist/bin/mage-zip",
+                "bin/mage-zip"
+            ],
+            [
+                "dist/bin/mage-unzip",
+                "bin/mage-unzip"
             ]
         ],
         "chmod": [
@@ -34,6 +42,14 @@
             {
                 "mask": "0755",
                 "path": "bin/mage-refresh-composer"
+            },
+            {
+                "mask": "0755",
+                "path": "bin/mage-zip"
+            },
+            {
+                "mask": "0755",
+                "path": "bin/mage-unzip"
             }
         ]
     }
