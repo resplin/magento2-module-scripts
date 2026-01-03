@@ -16,7 +16,7 @@ if [[ ! -e ./vendor/bin/n98-magerun2 ]]; then
   exit 1
 fi
 
-./vendor/bin/n98-magerun2 db:dump test.sql
+./vendor/bin/n98-magerun2 db:dump --no-tablespaces test.sql
 
 echo "EXPORT TEST complete"
 
