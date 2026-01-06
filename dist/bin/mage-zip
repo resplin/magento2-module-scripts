@@ -2,9 +2,15 @@
 
 set -euo pipefail
 
-echo "Archiving Magento2 directories app, dev, generated, lib, and vendor..."
+echo "Archiving Magento2 directories app, bin, dev, generated, lib, and vendor..."
 
-for folder in app dev generated lib vendor; do tar -zcf $folder.tar.gz $folder; echo "$folder zipped"; done;
+for folder in app bin dev generated lib vendor
+do
+  if [[ -e $folder ]]; then
+    tar -zcf $folder.tar.gz $folder
+    echo "$folder zipped"
+  fi
+done
 
 echo "ARCHIVING COMPLETE!"
 
