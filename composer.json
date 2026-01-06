@@ -14,6 +14,10 @@
                 "bin/mage-clean"
             ],
             [
+                "dist/bin/mage-export-db",
+                "bin/mage-export-db"
+            ],
+            [
                 "dist/bin/mage-init",
                 "bin/mage-init"
             ],
@@ -34,6 +38,10 @@
             {
                 "mask": "0755",
                 "path": "bin/mage-clean"
+            },
+            {
+                "mask": "0755",
+                "path": "bin/mage-export-db"
             },
             {
                 "mask": "0755",

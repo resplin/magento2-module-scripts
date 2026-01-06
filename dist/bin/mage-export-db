@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo "Exporting Magento2 DB..."
+
+echo "Searching for magerun2..."
+if [[ ! -e ./vendor/bin/n98-magerun2 ]]; then
+  echo "Did not find it magerun2, installing via composer..."
+  composer require n98/magerun2-dist --no-update
+  composer update n98/magerun2-dist --no-interaction --prefer-dist
+fi
+
+if [[ ! -e ./vendor/bin/n98-magerun2 ]]; then
+  echo "Unable to execute magerun2"
+  exit 1
+fi
+
+./vendor/bin/n98-magerun2 db:dump --no-tablespaces test.sql
+
+echo "EXPORT TEST complete"
+
+exit 0
