@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+cd "$HOME"/public_html
+
 echo "Archiving Magento2 directories app, bin, dev, generated, lib, and vendor..."
 
 for folder in app bin dev generated lib vendor
