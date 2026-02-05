@@ -2,8 +2,6 @@
 
 set -euo pipefail
 
-cd "$HOME"/public_html
-
 php bin/magento maintenance:enable
 
 rm -rf var/generation/* var/cache/* var/view_preprocessed/* pub/static/deployed_versions.txt pub/static/frontend/* pub/static/adminhtml/* var/page_cache/* var/di/* var/di generated/code/* generated/metadata/*

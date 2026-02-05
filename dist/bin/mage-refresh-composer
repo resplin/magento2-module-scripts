@@ -2,8 +2,6 @@
 
 set -euo pipefail
 
-cd "$HOME"/public_html
-
 echo "Refreshing vendor via composer..."
 
 rm -rf vendor

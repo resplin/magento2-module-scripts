@@ -2,8 +2,6 @@
 
 set -euo pipefail
 
-cd "$HOME"/public_html
-
 echo "Exporting Magento2 DB..."
 
 echo "Searching for magerun2..."
